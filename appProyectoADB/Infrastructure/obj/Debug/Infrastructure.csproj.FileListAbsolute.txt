@@ -1,0 +1,12 @@
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\Infrastructure.dll.config
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\obj\Debug\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\MGueL\source\repos\appProyectoADB\Infrastructure\obj\Debug\Infrastructure.csproj.CopyComplete

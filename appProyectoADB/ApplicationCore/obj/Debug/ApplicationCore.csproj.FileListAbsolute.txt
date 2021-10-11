@@ -1,0 +1,9 @@
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\bin\Debug\ApplicationCore.dll
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\bin\Debug\ApplicationCore.pdb
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\bin\Debug\Infrastructure.dll
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\bin\Debug\Infrastructure.pdb
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.AssemblyReference.cache
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.CopyComplete
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.dll
+C:\Users\MGueL\source\repos\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.pdb
