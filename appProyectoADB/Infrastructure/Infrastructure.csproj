@@ -102,11 +102,11 @@
       <DependentUpon>EDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRepositoryProducto.cs" />
+    <Compile Include="Repository\RepositoryProducto.cs" />
     <Compile Include="Utils\Log.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <EntityDeploy Include="Models\EDModel.edmx">
