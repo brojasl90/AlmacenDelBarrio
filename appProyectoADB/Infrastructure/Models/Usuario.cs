@@ -25,17 +25,13 @@ namespace Infrastructure.Models
         public string Nombre { get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
+        public int IdRol { get; set; }
         public string Correo { get; set; }
         public string Clave { get; set; }
         public Nullable<byte> Estado { get; set; }
-        public int CodUsuario_Registro { get; set; }
-        public System.DateTime FechaRegistrado { get; set; }
-        public int CodUsuario_UltimaEdicion { get; set; }
-        public System.DateTime Fecha_UltimaEdicion { get; set; }
-        public int IdRol { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GestionInventario> GestionInventario { get; set; }
-        public virtual Rol Rol1 { get; set; }
+        public virtual Rol Rol { get; set; }
     }
 }

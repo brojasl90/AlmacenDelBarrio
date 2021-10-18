@@ -29,8 +29,8 @@ namespace Infrastructure.Models
         public System.DateTime FechaGestion { get; set; }
         public int UsuarioGestion { get; set; }
     
-        public virtual Usuario Usuario { get; set; }
         public virtual TipoMovimiento TipoMovimiento { get; set; }
+        public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Producto> Producto { get; set; }
     }

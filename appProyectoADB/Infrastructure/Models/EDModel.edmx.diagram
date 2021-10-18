@@ -8,22 +8,21 @@
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.Bodega" Width="1.5" PointX="10" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.Categoria" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.GestionInventario" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Producto" Width="1.875" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.Proveedor" Width="2.25" PointX="7.5" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Rol" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.TipoMovimiento" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AlmacenDelBarrioModel.Ubicacion" Width="1.5" PointX="12.625" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Usuario" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdUbicacion" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.FK_Producto_Categoria" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdGestionInventarioUsuario" ManuallyRouted="false" />
         <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdTipoMovimiento" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.ProductoBodega" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.ProductoGestionInventario" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.ProveedorProducto" ManuallyRouted="false" />
-        <AssociationConnector ManuallyRouted="false" Association="AlmacenDelBarrioModel.Usuario_ROL" />
+        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Rol" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Usuario" Width="1.5" PointX="3" PointY="0.75" />
+        <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdGestionInventarioUsuario" />
         <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdRol" />
-      </Diagram>
+        <EntityTypeShape EntityType="AlmacenDelBarrioModel.Producto" Width="1.5" PointX="7.375" PointY="1.625" />
+        <AssociationConnector Association="AlmacenDelBarrioModel.FK_Producto_Categoria" />
+        <AssociationConnector Association="AlmacenDelBarrioModel.ProductoBodega" />
+        <AssociationConnector Association="AlmacenDelBarrioModel.ProductoGestionInventario" />
+        <AssociationConnector Association="AlmacenDelBarrioModel.ProveedorProducto" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

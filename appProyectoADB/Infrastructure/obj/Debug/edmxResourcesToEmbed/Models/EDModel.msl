@@ -31,23 +31,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Producto">
-      <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Producto">
-        <MappingFragment StoreEntitySet="Producto">
-          <ScalarProperty Name="FechaVence" ColumnName="FechaVence" />
-          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
-          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
-          <ScalarProperty Name="Nombre_Producto" ColumnName="Nombre_Producto" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Precio" ColumnName="Precio" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="CantidadDisponible" ColumnName="CantidadDisponible" />
-          <ScalarProperty Name="CantidadStockMin" ColumnName="CantidadStockMin" />
-          <ScalarProperty Name="CantidadStockMax" ColumnName="CantidadStockMax" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Proveedor">
       <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Proveedor">
         <MappingFragment StoreEntitySet="Proveedor">
@@ -60,15 +43,6 @@
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="Pais" ColumnName="Pais" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Rol">
-      <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Rol">
-        <MappingFragment StoreEntitySet="Rol">
-          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -90,43 +64,69 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
-          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
-          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-          <ScalarProperty Name="NumeroIdentificacion" ColumnName="NumeroIdentificacion" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
-          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
-          <ScalarProperty Name="Correo" ColumnName="Correo" />
-          <ScalarProperty Name="Clave" ColumnName="Clave" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NumeroIdentificacion" ColumnName="NumeroIdentificacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="AlmacenDelBarrioModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="CantidadStockMax" ColumnName="CantidadStockMax" />
+          <ScalarProperty Name="CantidadStockMin" ColumnName="CantidadStockMin" />
+          <ScalarProperty Name="CantidadDisponible" ColumnName="CantidadDisponible" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaVence" ColumnName="FechaVence" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre_Producto" ColumnName="Nombre_Producto" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <AssociationSetMapping Name="ProductoBodega" TypeName="AlmacenDelBarrioModel.ProductoBodega" StoreEntitySet="ProductoBodega">
+      <EndProperty Name="Producto">
+        <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+      </EndProperty>
       <EndProperty Name="Bodega">
         <ScalarProperty Name="IdBodega" ColumnName="IdBodega" />
       </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductoGestionInventario" TypeName="AlmacenDelBarrioModel.ProductoGestionInventario" StoreEntitySet="ProductoGestionInventario">
       <EndProperty Name="Producto">
         <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
       </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="ProductoGestionInventario" TypeName="AlmacenDelBarrioModel.ProductoGestionInventario" StoreEntitySet="ProductoGestionInventario">
       <EndProperty Name="GestionInventario">
         <ScalarProperty Name="IdGestionInventario" ColumnName="IdGestionInventario" />
       </EndProperty>
-      <EndProperty Name="Producto">
-        <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-      </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="ProveedorProducto" TypeName="AlmacenDelBarrioModel.ProveedorProducto" StoreEntitySet="ProveedorProducto">
-      <EndProperty Name="Proveedor">
-        <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
-      </EndProperty>
       <EndProperty Name="Producto">
         <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+      </EndProperty>
+      <EndProperty Name="Proveedor">
+        <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

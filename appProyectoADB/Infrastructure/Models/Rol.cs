@@ -18,20 +18,13 @@ namespace Infrastructure.Models
         public Rol()
         {
             this.Usuario = new HashSet<Usuario>();
-            this.Usuario1 = new HashSet<Usuario>();
         }
     
         public int IdRol { get; set; }
         public string Descripcion { get; set; }
         public Nullable<byte> Estado { get; set; }
-        public int CodUsuario_Registro { get; set; }
-        public System.DateTime FechaRegistrado { get; set; }
-        public int CodUsuario_UltimaEdicion { get; set; }
-        public System.DateTime Fecha_UltimaEdicion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuario1 { get; set; }
     }
 }
