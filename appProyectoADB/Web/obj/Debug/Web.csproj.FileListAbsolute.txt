@@ -97,6 +97,7 @@ C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.csproj.CoreCompileI
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.csproj.CopyComplete
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.dll
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.pdb
+<<<<<<< HEAD
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.dll.config
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.pdb
@@ -203,3 +204,5 @@ D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.Co
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.CopyComplete
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.pdb
+=======
+>>>>>>> parent of 61b3ccd (Install log4net)
