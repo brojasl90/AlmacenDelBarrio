@@ -97,10 +97,6 @@ C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.csproj.CoreCompileI
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.csproj.CopyComplete
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.dll
 C:\Users\MGueL\source\repos\appProyectoADB\Web\obj\Debug\Web.pdb
-D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.AssemblyReference.cache
-D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
-D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.dll
-D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.pdb
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.dll.config
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\Web.pdb
@@ -202,4 +198,8 @@ D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\es\System.Web.WebPa
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\es\System.Net.Http.Formatting.resources.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\es\System.Web.Http.resources.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\bin\es\System.Web.Http.WebHost.resources.dll
+D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.AssemblyReference.cache
+D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.csproj.CopyComplete
+D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.dll
+D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\Web\obj\Debug\Web.pdb

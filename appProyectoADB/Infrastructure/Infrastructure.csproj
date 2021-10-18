@@ -82,6 +82,7 @@
     <Compile Include="Models\GestionInventario.cs">
       <DependentUpon>EDModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MainContext.cs" />
     <Compile Include="Models\Producto.cs">
       <DependentUpon>EDModel.tt</DependentUpon>
     </Compile>
