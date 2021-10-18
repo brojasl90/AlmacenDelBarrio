@@ -35,6 +35,8 @@ namespace Infrastructure.Models
         public System.DateTime FechaRegistrado { get; set; }
         public int CodUsuario_UltimaEdicion { get; set; }
         public System.DateTime Fecha_UltimaEdicion { get; set; }
+        public Nullable<System.DateTime> FechaCreacion { get; set; }
+        public Nullable<System.DateTime> FechaVence { get; set; }
     
         public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

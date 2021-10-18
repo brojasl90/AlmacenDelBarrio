@@ -27,6 +27,7 @@ namespace Infrastructure.Models
         public Nullable<int> CantidadProductoGestionado { get; set; }
         public int CodUsuario_Registro { get; set; }
         public System.DateTime FechaGestion { get; set; }
+        public int UsuarioGestion { get; set; }
     
         public virtual Usuario Usuario { get; set; }
         public virtual TipoMovimiento TipoMovimiento { get; set; }

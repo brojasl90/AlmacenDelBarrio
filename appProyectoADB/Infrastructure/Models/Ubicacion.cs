@@ -23,6 +23,7 @@ namespace Infrastructure.Models
         public int IdUbicacion { get; set; }
         public string Descipcion { get; set; }
         public Nullable<byte> Estado { get; set; }
+        public string Descripcion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bodega> Bodega { get; set; }

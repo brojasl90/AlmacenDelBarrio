@@ -33,10 +33,12 @@ namespace Infrastructure.Models
         public System.DateTime FechaRegistrado { get; set; }
         public int CodUsuario_UltimaEdicion { get; set; }
         public System.DateTime Fecha_UltimaEdicion { get; set; }
+        public int IdRol { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GestionInventario> GestionInventario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rol> Rol { get; set; }
+        public virtual Rol Rol1 { get; set; }
     }
 }
