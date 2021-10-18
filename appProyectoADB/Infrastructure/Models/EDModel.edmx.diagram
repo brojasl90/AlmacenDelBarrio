@@ -21,7 +21,7 @@
         <AssociationConnector Association="AlmacenDelBarrioModel.ProductoBodega" ManuallyRouted="false" />
         <AssociationConnector Association="AlmacenDelBarrioModel.ProductoGestionInventario" ManuallyRouted="false" />
         <AssociationConnector Association="AlmacenDelBarrioModel.ProveedorProducto" ManuallyRouted="false" />
-        <AssociationConnector Association="AlmacenDelBarrioModel.Usuario_ROL" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="AlmacenDelBarrioModel.Usuario_ROL" />
         <AssociationConnector Association="AlmacenDelBarrioModel.FK_IdRol" />
       </Diagram>
     </edmx:Diagrams>

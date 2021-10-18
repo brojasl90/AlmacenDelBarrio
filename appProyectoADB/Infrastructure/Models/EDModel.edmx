@@ -460,7 +460,6 @@
           <Property Name="CodUsuario_UltimaEdicion" Type="Int32" Nullable="false" />
           <Property Name="Fecha_UltimaEdicion" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="GestionInventario" Relationship="Self.FK_IdGestionInventarioUsuario" FromRole="Usuario" ToRole="GestionInventario" />
-          <NavigationProperty Name="Rol" Relationship="Self.Usuario_ROL" FromRole="Usuario" ToRole="Rol" />
           <Property Name="IdRol" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Rol1" Relationship="AlmacenDelBarrioModel.FK_IdRol" FromRole="Usuario" ToRole="Rol" />
         </EntityType>
@@ -525,8 +524,8 @@
           <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
         </Association>
         <Association Name="Usuario_ROL">
-          <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <End Type="Self.Rol" Multiplicity="*" Role="Rol" />
+          <End Type="Self.Usuario" Multiplicity="*" Role="Usuario" />
         </Association>
         <EntityContainer Name="AlmacenDelBarrioEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bodega" EntityType="Self.Bodega" />
@@ -567,8 +566,8 @@
             <End Role="Producto" EntitySet="Producto" />
           </AssociationSet>
           <AssociationSet Name="Usuario_ROL" Association="Self.Usuario_ROL">
-            <End Role="Rol" EntitySet="Rol" />
-            <End Role="Usuario" EntitySet="Usuario" />
+            <End EntitySet="Rol" Role="Rol" />
+            <End EntitySet="Usuario" Role="Usuario" />
           </AssociationSet>
           <AssociationSet Name="FK_IdRol" Association="AlmacenDelBarrioModel.FK_IdRol">
             <End Role="Rol" EntitySet="Rol" />

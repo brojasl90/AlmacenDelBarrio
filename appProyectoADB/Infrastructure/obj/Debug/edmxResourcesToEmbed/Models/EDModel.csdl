@@ -36,6 +36,7 @@
     <NavigationProperty Name="Usuario" Relationship="Self.FK_IdGestionInventarioUsuario" FromRole="GestionInventario" ToRole="Usuario" />
     <NavigationProperty Name="TipoMovimiento" Relationship="Self.FK_IdTipoMovimiento" FromRole="GestionInventario" ToRole="TipoMovimiento" />
     <NavigationProperty Name="Producto" Relationship="Self.ProductoGestionInventario" FromRole="GestionInventario" ToRole="Producto" />
+    <Property Name="UsuarioGestion" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Producto">
     <Key>
@@ -58,6 +59,8 @@
     <NavigationProperty Name="Bodega" Relationship="Self.ProductoBodega" FromRole="Producto" ToRole="Bodega" />
     <NavigationProperty Name="GestionInventario" Relationship="Self.ProductoGestionInventario" FromRole="Producto" ToRole="GestionInventario" />
     <NavigationProperty Name="Proveedor" Relationship="Self.ProveedorProducto" FromRole="Producto" ToRole="Proveedor" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="FechaVence" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Proveedor">
     <Key>
@@ -76,6 +79,7 @@
     <Property Name="CodUsuario_UltimaEdicion" Type="Int32" Nullable="false" />
     <Property Name="Fecha_UltimaEdicion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Producto" Relationship="Self.ProveedorProducto" FromRole="Proveedor" ToRole="Producto" />
+    <Property Name="Estado" Type="Byte" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -89,6 +93,7 @@
     <Property Name="CodUsuario_UltimaEdicion" Type="Int32" Nullable="false" />
     <Property Name="Fecha_UltimaEdicion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Usuario" Relationship="Self.Usuario_ROL" FromRole="Rol" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="AlmacenDelBarrioModel.FK_IdRol" FromRole="Rol" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="TipoMovimiento">
     <Key>
@@ -107,6 +112,7 @@
     <Property Name="Descipcion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Estado" Type="Byte" />
     <NavigationProperty Name="Bodega" Relationship="Self.FK_IdUbicacion" FromRole="Ubicacion" ToRole="Bodega" />
+    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -125,7 +131,8 @@
     <Property Name="CodUsuario_UltimaEdicion" Type="Int32" Nullable="false" />
     <Property Name="Fecha_UltimaEdicion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="GestionInventario" Relationship="Self.FK_IdGestionInventarioUsuario" FromRole="Usuario" ToRole="GestionInventario" />
-    <NavigationProperty Name="Rol" Relationship="Self.Usuario_ROL" FromRole="Usuario" ToRole="Rol" />
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rol1" Relationship="AlmacenDelBarrioModel.FK_IdRol" FromRole="Usuario" ToRole="Rol" />
   </EntityType>
   <Association Name="FK_IdUbicacion">
     <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="1" />
@@ -188,8 +195,8 @@
     <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
   </Association>
   <Association Name="Usuario_ROL">
-    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
-    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <End Type="Self.Rol" Multiplicity="*" Role="Rol" />
+    <End Type="Self.Usuario" Multiplicity="*" Role="Usuario" />
   </Association>
   <EntityContainer Name="AlmacenDelBarrioEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Bodega" EntityType="Self.Bodega" />
@@ -230,8 +237,24 @@
       <End Role="Producto" EntitySet="Producto" />
     </AssociationSet>
     <AssociationSet Name="Usuario_ROL" Association="Self.Usuario_ROL">
+      <End EntitySet="Rol" Role="Rol" />
+      <End EntitySet="Usuario" Role="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdRol" Association="AlmacenDelBarrioModel.FK_IdRol">
       <End Role="Rol" EntitySet="Rol" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_IdRol">
+    <End Type="AlmacenDelBarrioModel.Rol" Role="Rol" Multiplicity="1" />
+    <End Type="AlmacenDelBarrioModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

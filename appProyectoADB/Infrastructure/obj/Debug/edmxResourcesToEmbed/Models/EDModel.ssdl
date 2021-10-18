@@ -6,10 +6,6 @@
     </Key>
     <Property Name="IdBodega" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdUbicacion" Type="int" Nullable="false" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
-    <Property Name="FechaRegistrado" Type="datetime" Nullable="false" />
-    <Property Name="CodUsuario_UltimaEdicion" Type="int" Nullable="false" />
-    <Property Name="Fecha_UltimaEdicion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -28,7 +24,7 @@
     <Property Name="TipoGestion" Type="nvarchar" MaxLength="255" />
     <Property Name="IdTipMovimiento" Type="int" Nullable="false" />
     <Property Name="CantidadProductoGestionado" Type="int" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
+    <Property Name="UsuarioGestion" Type="int" Nullable="false" />
     <Property Name="FechaGestion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Producto">
@@ -40,14 +36,12 @@
     <Property Name="Nombre_Producto" Type="nvarchar" MaxLength="255" />
     <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
     <Property Name="Precio" Type="money" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaVence" Type="datetime" />
     <Property Name="Estado" Type="tinyint" />
     <Property Name="CantidadDisponible" Type="int" />
     <Property Name="CantidadStockMin" Type="int" />
     <Property Name="CantidadStockMax" Type="int" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
-    <Property Name="FechaRegistrado" Type="datetime" Nullable="false" />
-    <Property Name="CodUsuario_UltimaEdicion" Type="int" Nullable="false" />
-    <Property Name="Fecha_UltimaEdicion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductoBodega">
     <Key>
@@ -77,10 +71,7 @@
     <Property Name="Correo" Type="nvarchar" MaxLength="255" />
     <Property Name="Pais" Type="nvarchar" MaxLength="255" />
     <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
-    <Property Name="FechaRegistrado" Type="datetime" Nullable="false" />
-    <Property Name="CodUsuario_UltimaEdicion" Type="int" Nullable="false" />
-    <Property Name="Fecha_UltimaEdicion" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="tinyint" />
   </EntityType>
   <EntityType Name="ProveedorProducto">
     <Key>
@@ -97,10 +88,6 @@
     <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar" MaxLength="50" />
     <Property Name="Estado" Type="tinyint" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
-    <Property Name="FechaRegistrado" Type="datetime" Nullable="false" />
-    <Property Name="CodUsuario_UltimaEdicion" Type="int" Nullable="false" />
-    <Property Name="Fecha_UltimaEdicion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -125,7 +112,7 @@
       <PropertyRef Name="IdUbicacion" />
     </Key>
     <Property Name="IdUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Descipcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
     <Property Name="Estado" Type="tinyint" />
   </EntityType>
   <EntityType Name="Usuario">
@@ -137,21 +124,10 @@
     <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="PrimerApellido" Type="nvarchar" MaxLength="255" />
     <Property Name="SegundoApellido" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
     <Property Name="Correo" Type="nvarchar" MaxLength="255" />
     <Property Name="Clave" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Estado" Type="tinyint" />
-    <Property Name="CodUsuario_Registro" Type="int" Nullable="false" />
-    <Property Name="FechaRegistrado" Type="datetime" Nullable="false" />
-    <Property Name="CodUsuario_UltimaEdicion" Type="int" Nullable="false" />
-    <Property Name="Fecha_UltimaEdicion" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Usuario_ROL">
-    <Key>
-      <PropertyRef Name="IdUsuario" />
-      <PropertyRef Name="IdRol" />
-    </Key>
-    <Property Name="IdUsuario" Type="int" Nullable="false" />
-    <Property Name="IdRol" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_IdBodegaProducto">
     <End Role="Bodega" Type="Self.Bodega" Multiplicity="1" />
@@ -239,12 +215,12 @@
   </Association>
   <Association Name="FK_IdRol">
     <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
-    <End Role="Usuario_ROL" Type="Self.Usuario_ROL" Multiplicity="*" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rol">
         <PropertyRef Name="IdRol" />
       </Principal>
-      <Dependent Role="Usuario_ROL">
+      <Dependent Role="Usuario">
         <PropertyRef Name="IdRol" />
       </Dependent>
     </ReferentialConstraint>
@@ -270,18 +246,6 @@
       </Principal>
       <Dependent Role="Bodega">
         <PropertyRef Name="IdUbicacion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_IdUsuario">
-    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Usuario_ROL" Type="Self.Usuario_ROL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="Usuario_ROL">
-        <PropertyRef Name="IdUsuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -311,7 +275,6 @@
     <EntitySet Name="TipoMovimiento" EntityType="Self.TipoMovimiento" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Usuario_ROL" EntityType="Self.Usuario_ROL" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_IdBodegaProducto" Association="Self.FK_IdBodegaProducto">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="ProductoBodega" EntitySet="ProductoBodega" />
@@ -342,7 +305,7 @@
     </AssociationSet>
     <AssociationSet Name="FK_IdRol" Association="Self.FK_IdRol">
       <End Role="Rol" EntitySet="Rol" />
-      <End Role="Usuario_ROL" EntitySet="Usuario_ROL" />
+      <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
     <AssociationSet Name="FK_IdTipoMovimiento" Association="Self.FK_IdTipoMovimiento">
       <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
@@ -351,10 +314,6 @@
     <AssociationSet Name="FK_IdUbicacion" Association="Self.FK_IdUbicacion">
       <End Role="Ubicacion" EntitySet="Ubicacion" />
       <End Role="Bodega" EntitySet="Bodega" />
-    </AssociationSet>
-    <AssociationSet Name="FK_IdUsuario" Association="Self.FK_IdUsuario">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Usuario_ROL" EntitySet="Usuario_ROL" />
     </AssociationSet>
     <AssociationSet Name="FK_Producto_Categoria" Association="Self.FK_Producto_Categoria">
       <End Role="Categoria" EntitySet="Categoria" />

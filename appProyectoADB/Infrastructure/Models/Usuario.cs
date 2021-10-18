@@ -18,7 +18,6 @@ namespace Infrastructure.Models
         public Usuario()
         {
             this.GestionInventario = new HashSet<GestionInventario>();
-            this.Rol = new HashSet<Rol>();
         }
     
         public int IdUsuario { get; set; }
@@ -37,8 +36,6 @@ namespace Infrastructure.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GestionInventario> GestionInventario { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rol> Rol { get; set; }
         public virtual Rol Rol1 { get; set; }
     }
 }

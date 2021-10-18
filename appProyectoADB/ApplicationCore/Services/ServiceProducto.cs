@@ -20,5 +20,5 @@ namespace ApplicationCore.Services
             RepositoryProducto repository = new RepositoryProducto();
             return repository.GetProductos();
         }
-    }
+    } 
 }

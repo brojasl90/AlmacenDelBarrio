@@ -18,6 +18,6 @@ D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\bin\Debug\l
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\bin\Debug\EntityFramework.xml
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.AssemblyReference.cache
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.CoreCompileInputs.cache
-D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.CopyComplete
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.dll
 D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.pdb
+D:\Archivos\F\GitHub\AlmacenDelBarrio\appProyectoADB\ApplicationCore\obj\Debug\ApplicationCore.csproj.CopyComplete
